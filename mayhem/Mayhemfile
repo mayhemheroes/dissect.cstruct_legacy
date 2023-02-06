@@ -1,0 +1,9 @@
+project: dissect.cstruct_legacy
+target: fuzz-cstruct
+testsuite:
+    - file://mayhem/testsuite
+
+cmds:
+  - cmd: /src/mayhem/fuzz_cstruct.py
+    libfuzzer: true
+    timeout: 12
