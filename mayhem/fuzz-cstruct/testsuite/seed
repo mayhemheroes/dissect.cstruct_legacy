@@ -1,0 +1,12 @@
+#define SOME_CONSTANT   5
+
+enum Example : uint16 {
+    A, B = 0x5, C
+};
+
+struct some_struct {
+    uint8   field_1;
+    char    field_2[SOME_CONSTANT];
+    char    field_3[field_1 & 1 * 5];  // Some random expression to calculate array length
+    Example field_4[2];
+};

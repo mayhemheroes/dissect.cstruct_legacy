@@ -1,0 +1,8 @@
+project: dissect.cstruct_legacy
+target: fuzz-cstruct
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-cstruct/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-cstruct
+    libfuzzer: true
